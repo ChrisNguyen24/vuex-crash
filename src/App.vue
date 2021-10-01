@@ -1,18 +1,31 @@
 <template>
   <div id="app">
     <h1>{{ msg }}</h1>
-    <h2>Vuex Demo</h2>
-
+    <Navbar></Navbar>
+    <Todos></Todos>
+    <hr>
+    <span>total task {{totalTask}}</span>
   </div>
 </template>
 
 <script>
+import Todos from './assets/components/Todo'
+import Navbar from "./assets/components/Navbar";
 export default {
   name: 'app',
   data () {
     return {
       msg: 'Demo Vuex app'
     }
+  },
+  computed :{
+    totalTask(){
+      return this.$store.state.todos.length;
+    }
+  },
+  components:{
+    Todos,
+    Navbar
   }
 }
 </script>
