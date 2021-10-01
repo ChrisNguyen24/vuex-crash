@@ -14,10 +14,11 @@ import {mapState} from 'vuex'
 export default {
   name: "Todo.vue",
   data() {
-    return {
-      todos :this.$store.state.todos,
-    }
-  }
+    return {}
+  },
+  computed : mapState({
+    todos : state => state.todos,
+  })
 }
 </script>
 
