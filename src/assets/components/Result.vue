@@ -1,17 +1,18 @@
 <template>
   <div class="result">
     <p>
-      result {{getResult}}
+      result {{tenResult}}
     </p>
     <hr>
     <p>
-      Get Name {{getName}}
+      Get Name: {{getName}}
     </p>
 
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: "Todo.vue",
   data() {
@@ -19,14 +20,7 @@ export default {
       result: this.$store.state.result
     }
   },
-  computed : {
-    getName (){
-      return this.$store.getters.getName;
-    },
-    getResult (){
-      return this.$store.state.result
-    }
-  }
+  computed : mapGetters(['getName', 'tenResult'])
 }
 </script>
 
