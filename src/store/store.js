@@ -12,6 +12,12 @@ const storeData = {
     ],
     auth: {
       isAuthenticated: "false",
+    },
+    result: 0
+  },
+  getters :{
+    tenResult : state => {
+      return state.result+10;
     }
   }
 }

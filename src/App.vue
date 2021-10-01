@@ -5,27 +5,39 @@
     <Todos></Todos>
     <hr>
     <span>total task {{totalTask}}</span>
+    <span>ten result {{tenResult}}</span>
+    <Counter @updatecounter="result += $event"></Counter>
+    <Result :result="result" ></Result>
   </div>
 </template>
 
 <script>
 import Todos from './assets/components/Todo'
 import Navbar from "./assets/components/Navbar";
+import Counter from "./assets/components/Counter";
+import Result from "./assets/components/Result";
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Demo Vuex app'
+      msg: 'Demo Vuex app',
+      result : 0
     }
   },
   computed :{
     totalTask(){
       return this.$store.state.todos.length;
+    },
+    tenResult() {
+      return this.$store.getters.tenResult;
     }
   },
   components:{
     Todos,
-    Navbar
+    Navbar,
+    Counter,
+    Result
   }
 }
 </script>
