@@ -13,10 +13,10 @@ export default {
   },
   methods: {
     increase(){
-      this.$emit('updatecounter',1);
+        this.$store.state.result +=1;
     },
     decrease(){
-      this.$emit('updatecounter',-1);
+        this.$store.state.result -=1;
     }
   }
 }

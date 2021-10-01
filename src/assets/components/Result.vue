@@ -1,18 +1,32 @@
 <template>
   <div class="result">
-    result {{result}}
+    <p>
+      result {{getResult}}
+    </p>
+    <hr>
+    <p>
+      Get Name {{getName}}
+    </p>
+
   </div>
 </template>
 
 <script>
 export default {
-  props : ['result'],
   name: "Todo.vue",
   data() {
     return {
-      result: 0,
+      result: this.$store.state.result
     }
   },
+  computed : {
+    getName (){
+      return this.$store.getters.getName;
+    },
+    getResult (){
+      return this.$store.state.result
+    }
+  }
 }
 </script>
 

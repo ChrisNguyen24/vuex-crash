@@ -18,6 +18,9 @@ const storeData = {
   getters :{
     tenResult : state => {
       return state.result+10;
+    },
+    getName : state => {
+      return state.result + '_name result_' + state.result;
     }
   }
 }

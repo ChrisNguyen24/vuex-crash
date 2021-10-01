@@ -6,8 +6,8 @@
     <hr>
     <span>total task {{totalTask}}</span>
     <span>ten result {{tenResult}}</span>
-    <Counter @updatecounter="result += $event"></Counter>
-    <Result :result="result" ></Result>
+    <Counter ></Counter>
+    <Result ></Result>
   </div>
 </template>
 
