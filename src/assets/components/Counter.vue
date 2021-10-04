@@ -7,21 +7,18 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
+
 export default {
   name: "Todo.vue",
   data() {
     return {}
   },
   methods: {
-    increase(){
-        this.$store.commit('increaseOpt',30);
-    },
     decrease(){
         this.$store.state.result -=1;
     },
-    decrement() {
-      this.$store.commit('decrement');
-    }
+    ...mapMutations(['decrement','increaseOpt'])
   }
 }
 </script>
