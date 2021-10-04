@@ -1,6 +1,6 @@
 <template>
   <div class="counter">
-    <button @click="increase">Increasing</button>
+    <button @click="decrementTimeout">decrementTimeout</button>
     <button @click="decrease">Decreasing</button>
     <button @click="decrement">Decrement</button>
     <button @click="incement(3)">Action Increment</button>
@@ -20,9 +20,7 @@ export default {
         this.$store.state.result -=1;
     },
     ...mapMutations(['decrement','increaseOpt']),
-    incement(n){
-      this.$store.dispatch('incement',n);
-    }
+    ...mapActions(['incement','decrementTimeout'])
   }
 }
 </script>

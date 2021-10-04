@@ -34,6 +34,11 @@ const storeData = {
   actions : {
     incement: ({commit},num) => {
       commit('increaseOpt',num);
+    },
+    decrementTimeout: ({commit}) =>{
+      setTimeout(()=>{
+        commit('decrement')
+      },2000)
     }
   }
 }
