@@ -8,8 +8,8 @@
       Get Name: {{getName}}
     </p>
     <hr>
-    <input type="text" :value="valuex" @input="updateValue" />
-    <span>Test text: {{ valuex }}</span>
+    <input type="text" v-model="value" />
+    <span>Test text: {{ value }}</span>
 
   </div>
 </template>
@@ -24,18 +24,18 @@ export default {
     }
   },
   computed : {
-    /*value: function (){
-      return this.$store.getters.getValue;
-    },*/
-    valuex(){
-      return this.$store.getters.getValue;
+    value:{
+      get(){
+        return this.$store.getters.getValue;
+      },
+      set(value){
+        this.$store.dispatch('updateValue',value);
+      }
     },
     ...mapGetters(['getName', 'tenResult'])
   },
   methods: {
-    updateValue(event){
-      this.$store.dispatch('updateValue',event.target.value)
-    },
+
   }
 }
 </script>
