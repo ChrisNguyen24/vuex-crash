@@ -3,12 +3,13 @@
     <button @click="increase">Increasing</button>
     <button @click="decrease">Decreasing</button>
     <button @click="decrement">Decrement</button>
+    <button @click="incement(3)">Action Increment</button>
   </div>
 </template>
 
 <script>
 import {mapMutations} from 'vuex'
-
+import { mapActions } from 'vuex'
 export default {
   name: "Todo.vue",
   data() {
@@ -18,7 +19,10 @@ export default {
     decrease(){
         this.$store.state.result -=1;
     },
-    ...mapMutations(['decrement','increaseOpt'])
+    ...mapMutations(['decrement','increaseOpt']),
+    incement(n){
+      this.$store.dispatch('incement',n);
+    }
   }
 }
 </script>

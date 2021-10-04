@@ -30,6 +30,11 @@ const storeData = {
     decrement(state) {
       state.result --;
     }
+  },
+  actions : {
+    incement: ({commit},num) => {
+      commit('increaseOpt',num);
+    }
   }
 }
 
