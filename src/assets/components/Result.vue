@@ -7,6 +7,9 @@
     <p>
       Get Name: {{getName}}
     </p>
+    <hr>
+    <input type="text" :value="valuex" @input="updateValue" />
+    <span>Test text: {{ valuex }}</span>
 
   </div>
 </template>
@@ -17,11 +20,22 @@ export default {
   name: "Todo.vue",
   data() {
     return {
-      result: this.$store.state.result
+      result: this.$store.state.result,
     }
   },
   computed : {
+    /*value: function (){
+      return this.$store.getters.getValue;
+    },*/
+    valuex(){
+      return this.$store.getters.getValue;
+    },
     ...mapGetters(['getName', 'tenResult'])
+  },
+  methods: {
+    updateValue(event){
+      this.$store.dispatch('updateValue',event.target.value)
+    },
   }
 }
 </script>

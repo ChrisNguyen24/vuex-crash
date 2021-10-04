@@ -13,7 +13,8 @@ const storeData = {
     auth: {
       isAuthenticated: "false",
     },
-    result: 0
+    result: 0,
+    value: '',
   },
   getters :{
     tenResult : state => {
@@ -21,6 +22,9 @@ const storeData = {
     },
     getName : state => {
       return state.result + '_name result_' + state.result;
+    },
+    getValue: state => {
+      return state.value;
     }
   },
   mutations :{
@@ -29,6 +33,9 @@ const storeData = {
     },
     decrement(state) {
       state.result --;
+    },
+    updateValue: (state, payload) => {
+      state.value = payload;
     }
   },
   actions : {
@@ -39,6 +46,9 @@ const storeData = {
       setTimeout(()=>{
         commit('decrement')
       },2000)
+    },
+    updateValue: ({commit},payload) => {
+      commit('updateValue',payload);
     }
   }
 }
