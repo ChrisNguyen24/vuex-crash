@@ -2,6 +2,7 @@
   <div class="counter">
     <button @click="increase">Increasing</button>
     <button @click="decrease">Decreasing</button>
+    <button @click="decrement">Decrement</button>
   </div>
 </template>
 
@@ -13,10 +14,13 @@ export default {
   },
   methods: {
     increase(){
-        this.$store.state.result +=1;
+        this.$store.commit('increaseOpt',30);
     },
     decrease(){
         this.$store.state.result -=1;
+    },
+    decrement() {
+      this.$store.commit('decrement');
     }
   }
 }

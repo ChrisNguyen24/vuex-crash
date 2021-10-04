@@ -22,6 +22,14 @@ const storeData = {
     getName : state => {
       return state.result + '_name result_' + state.result;
     }
+  },
+  mutations :{
+    increaseOpt(state, n) {
+      state.result += n;
+    },
+    decrement(state) {
+      state.result --;
+    }
   }
 }
 
