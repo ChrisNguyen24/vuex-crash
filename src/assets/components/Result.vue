@@ -20,7 +20,9 @@ export default {
       result: this.$store.state.result
     }
   },
-  computed : mapGetters(['getName', 'tenResult'])
+  computed : {
+    ...mapGetters(['getName', 'tenResult'])
+  }
 }
 </script>
 
