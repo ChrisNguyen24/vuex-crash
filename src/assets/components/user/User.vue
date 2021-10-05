@@ -1,5 +1,7 @@
 <template>
-
+  <div id="user">
+    <h1>Wellcome to Userpages</h1>
+  </div>
 </template>
 
 <script>

@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
-    <Navbar></Navbar>
-    <Todos></Todos>
-    <hr>
-    <span>total task {{totalTask}}</span>
-    <span>ten result {{tenResult}}</span>
-    <Counter ></Counter>
-    <Result ></Result>
+    <div class="block" hidden>
+      <h1>{{ msg }}</h1>
+      <Navbar></Navbar>
+      <Todos></Todos>
+      <hr>
+      <span>total task {{totalTask}}</span>
+      <span>ten result {{tenResult}}</span>
+      <Counter ></Counter>
+      <Result ></Result>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 
