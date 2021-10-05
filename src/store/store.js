@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import Value from './module/Value.js'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,6 @@ const storeData = {
       isAuthenticated: "false",
     },
     result: 0,
-    value: '',
   },
   getters :{
     tenResult : state => {
@@ -50,6 +50,9 @@ const storeData = {
     updateValue: ({commit},payload) => {
       commit('updateValue',payload);
     }
+  },
+  modules : {
+    Value
   }
 }
 
