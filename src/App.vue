@@ -10,6 +10,8 @@
       <Counter ></Counter>
       <Result ></Result>
     </div>
+    <header-page></header-page>
+    <h3>{{msg}}</h3>
     <router-view></router-view>
   </div>
 </template>
@@ -19,6 +21,7 @@ import Todos from './assets/components/Todo'
 import Navbar from "./assets/components/Navbar";
 import Counter from "./assets/components/Counter";
 import Result from "./assets/components/Result";
+import HeaderPage from "./assets/components/layout/Header";
 
 export default {
   name: 'app',
@@ -28,19 +31,20 @@ export default {
       result : 0
     }
   },
-  computed :{
+/*  computed :{
     totalTask(){
       return this.$store.state.todos.length;
     },
     tenResult() {
       return this.$store.getters.tenResult;
     }
-  },
+  },*/
   components:{
     Todos,
     Navbar,
     Counter,
-    Result
+    Result,
+    HeaderPage
   }
 }
 </script>
