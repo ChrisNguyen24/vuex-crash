@@ -1,7 +1,8 @@
 <template>
   <div id="user-detail">
     <h1>user detail</h1>
-    <h3>Welcome user-id : {{id}}</h3>
+    <h3>Welcome user id : {{id}}</h3>
+    <h4>Locate: {{ $route.query.locate }}</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Aperiam assumenda aut consequuntur corporis, cumque distinctio dolore eaque,
       earum eligendi fugiat in mollitia officia pariatur perspiciatis praesentium quo ratione repellendus, sequi?</p>
