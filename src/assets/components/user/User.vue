@@ -4,6 +4,7 @@
     <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad deserunt eos fugiat impedit iste iusto molestias odit officia quia similique. Architecto commodi eos error, labore tempore unde. Debitis, expedita molestiae.</h5>
     <button @click="userDetail">User detail</button>
     <button @click="backHome">Back Home</button>
+    <router-view></router-view>
   </div>
 </template>
 
