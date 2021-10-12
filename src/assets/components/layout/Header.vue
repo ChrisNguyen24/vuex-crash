@@ -8,7 +8,7 @@
     <router-link
       tag="li"
       active-class="active"
-      to="/user/1"><a>User</a></router-link>
+      to="/user"><a>User</a></router-link>
     <li class="nav-item">
       <a class="nav-link disabled">Disabled</a>
     </li>
